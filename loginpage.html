@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo pointer">
+            <div>
+               <a href="home.html"><img src="MAILBAit.png" alt="" width="100%" ></a> 
+            </div>
+            
+        </div>
+      
+        <div class="login">
+            <button class="pointer" id="signin">Log In</button>
+            <button class="pointer" id="signup">Sign Up</button>
+        </div>
+    </div>
+
+    <div class="service">
+        <div id="cred">
+          <div><h1>Log In</h1></div>
+          <div class="blue"><p>Use Google account</p></div>
+          <div class="blue"><p>Use Github account</p></div>
+          <div class="blue"><p>Use Office 365 account</p></div>
+          <div><p>OR</p></div>
+          <div><label for="">Email</label>
+        <input type="text" id="email"></div>
+          <div class="green next" id="next">Next</div>
+          <div>Haven't received the confirmation email yet?<br>
+           <a href="">Resend the email</a> </div>
+        </div>
+
+        <!-- //////// -->
+        <div>  <div><img src="https://assets.mailtrap.io/packs/assets/landing/login-fb2fcb15feb36d8e9356.svg" alt=""></div>
+        <div><h4>Mailtrap displays your email styles without any changes, so you can view email content as it is.</h4></div></div>
+    </div>
+
+
+    <div id="bottom">
+        <div>
+           <div>
+            <a href="https://railsware.com/"><img src="download.jpg" alt="" width="70%"></a>
+           </div>
+           <div>
+            <p>&copy; Railsware Products, Inc.</p>
+           </div>
+        </div>
+        <div>
+            
+               <ul><b>MailBait</b></ul>
+               <ul>Pricing</ul>
+               <ul>Changelog</ul>
+               <ul>Status</ul>
+               <ul>Terms of Service</ul>
+               <ul>Privacy Policy</ul>
+               <ul>Navigational Information</ul>
+               <ul>DPA</ul>
+            
+           
+        </div>
+        <div>
+            <ul><b>Railsware Experience</b></ul>
+            <ul>Railsware Blog</ul>
+            <ul>Coupler.io</ul>
+            <ul>SMart Checklist for Jira</ul>
+           
+        </div>
+        <div>
+            <ul><b>Contact</b></ul>
+            <ul>email: support[at]mailbait.io</ul>
+            <ul>
+                <a href="https://www.facebook.com/"><img src="https://assets.mailtrap.io/packs/assets/landing/facebook-0be93f551b662821a339.svg" alt=""></a>
+                <a href="https://www.twitter.com"><img src="https://assets.mailtrap.io/packs/assets/landing/twitter-57fa29ba21896247fdc6.svg" alt=""></a>
+                <a href="https://www.linkedin.com"><img src="https://assets.mailtrap.io/packs/assets/landing/linkedin-604440460898fa41700c.svg" alt=""></a>
+            </ul>
+        </div>
+        <div>
+            <ul><b>What is Mailbait?</b></ul>
+            <ul>Mailtrap is a test mail server solution that allows testing email notifications without sending them to the real users of your application. Not only does Mailtrap work as a powerful email test tool, it also lets you view your dummy emails online, forward them to your regular mailbox, share with the team and more! Mailtrap is a mail server test tool built by Railsware Products, Inc., a premium software development consulting company.</ul>
+        </div>
+    </div>
+    
+
+</body>
+</html>
+<script>
+
+
+     document.querySelector("#signin").addEventListener("click",()=>{
+        document.location.href="loginpage.html"
+    })
+
+    document.querySelector("#signup").addEventListener("click",()=>{
+        document.location.href="signupPage.html"
+    })
+
+    // document.querySelector("#next").addEventListener("click",()=>{
+    //     let emailValue=document.querySelector("#email").value;
+    //     if(emailValue==""){
+    //         alert("Please Enter Your Email First")
+    //     }else{
+    //         document.querySelector("#cred").innerHTML=null;
+
+    //     let head1=document.createElement("div");
+    //     let heading=document.createElement("h1");
+    //     heading.innerText="Log In";
+    //     head1.append(heading);
+
+    //     let gacc=document.querySelector("div");
+    //     gacc.setAttribute("class","blue")
+    //     let p1=document.createElement("p");
+    //     p1.innerText="Use Google account";
+    //     gacc.append(p1);
+
+    //     let giacc=document.querySelector("div");
+    //     giacc.setAttribute("class","blue")
+    //     let p2=document.createElement("p");
+    //     p2.innerText="Use Github account";
+    //     giacc.append(p2);
+  
+    //     let oacc=document.querySelector("div");
+    //     oacc.setAttribute("class","blue")
+    //     let p3=document.createElement("p");
+    //     p3.innerText="Use Office 365 account";
+    //     oacc.append(p3);
+
+    //     let or=document.querySelector("div");
+    //     or.setAttribute("class","blue")
+    //     let p4=document.createElement("p");
+    //     p3.innerText="OR";
+    //     or.append(p3);
+
+
+    //     let div1=document.createElement("div");
+    //     let label1=document.createElement("label");
+    //     // label1.innerText("Email")
+    //     let input1=document.createElement("input");
+    //     input1.setAttribute("id","email");
+    //     input1.innerText=emailValue;
+    //     div1.append(label1,input1);
+
+    //     let green=document.createElement("div");
+    //     green.setAttribute("class","green next");
+    //     green.setAttribute("id","next");
+    //     green.innerText="Next";
+
+    //     let last=document.createElement("div");
+    //     let p5=document.createElement("p");
+    //     p5.innerText="Haven't received the confirmation email yet?";
+    //     let break1=document.createElement("br");
+    //     let a=document.createElement("a");
+    //     a.innerText="Resend the email";
+
+    //     last.append(p5,break1,a);
+
+
+
+    //     document.querySelector("#cred").append("hiii")
+
+
+    //     }
+    // })
+
+  
+</script>
