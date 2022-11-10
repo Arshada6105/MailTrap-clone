@@ -100,72 +100,88 @@
         document.location.href="signupPage.html"
     })
 
-    // document.querySelector("#next").addEventListener("click",()=>{
-    //     let emailValue=document.querySelector("#email").value;
-    //     if(emailValue==""){
-    //         alert("Please Enter Your Email First")
-    //     }else{
-    //         document.querySelector("#cred").innerHTML=null;
+    document.querySelector("#next").addEventListener("click",()=>{
+        let emailValue=document.querySelector("#email").value;
+        if(emailValue==""){
+            alert("Please Enter Your Email First")
+        }else{
+            document.querySelector("#cred").innerHTML=null;
 
-    //     let head1=document.createElement("div");
-    //     let heading=document.createElement("h1");
-    //     heading.innerText="Log In";
-    //     head1.append(heading);
+        let head1=document.createElement("div");
+        let heading=document.createElement("h1");
+        heading.innerText="Log In";
+        head1.append(heading);
 
-    //     let gacc=document.querySelector("div");
-    //     gacc.setAttribute("class","blue")
-    //     let p1=document.createElement("p");
-    //     p1.innerText="Use Google account";
-    //     gacc.append(p1);
+        let gacc=document.createElement("div");
+        gacc.setAttribute("class","blue")
+        let p1=document.createElement("p");
+        p1.innerText="Use Google account";
+        gacc.append(p1);
 
-    //     let giacc=document.querySelector("div");
-    //     giacc.setAttribute("class","blue")
-    //     let p2=document.createElement("p");
-    //     p2.innerText="Use Github account";
-    //     giacc.append(p2);
+        let giacc=document.createElement("div");
+        giacc.setAttribute("class","blue")
+        let p2=document.createElement("p");
+        p2.innerText="Use Github account";
+        giacc.append(p2);
   
-    //     let oacc=document.querySelector("div");
-    //     oacc.setAttribute("class","blue")
-    //     let p3=document.createElement("p");
-    //     p3.innerText="Use Office 365 account";
-    //     oacc.append(p3);
+        let oacc=document.createElement("div");
+        oacc.setAttribute("class","blue")
+        let p3=document.createElement("p");
+        p3.innerText="Use Office 365 account";
+        oacc.append(p3);
 
-    //     let or=document.querySelector("div");
-    //     or.setAttribute("class","blue")
-    //     let p4=document.createElement("p");
-    //     p3.innerText="OR";
-    //     or.append(p3);
-
-
-    //     let div1=document.createElement("div");
-    //     let label1=document.createElement("label");
-    //     // label1.innerText("Email")
-    //     let input1=document.createElement("input");
-    //     input1.setAttribute("id","email");
-    //     input1.innerText=emailValue;
-    //     div1.append(label1,input1);
-
-    //     let green=document.createElement("div");
-    //     green.setAttribute("class","green next");
-    //     green.setAttribute("id","next");
-    //     green.innerText="Next";
-
-    //     let last=document.createElement("div");
-    //     let p5=document.createElement("p");
-    //     p5.innerText="Haven't received the confirmation email yet?";
-    //     let break1=document.createElement("br");
-    //     let a=document.createElement("a");
-    //     a.innerText="Resend the email";
-
-    //     last.append(p5,break1,a);
+        let or=document.createElement("div");
+        or.setAttribute("class","blue")
+        let p4=document.createElement("p");
+        p3.innerText="OR";
+        or.append(p3);
 
 
+        let div1=document.createElement("div");
+        let label1=document.createElement("label");
+        // label1.innerText("Email")
+        let input1=document.createElement("input");
+        input1.setAttribute("id","email");
+        input1.innerText=emailValue;
+        div1.append(label1,input1);
 
-    //     document.querySelector("#cred").append("hiii")
+        let green=document.createElement("div");
+        green.setAttribute("class","green next");
+        green.setAttribute("id","next");
+        green.innerText="Next";
+
+        let last=document.createElement("div");
+        let p5=document.createElement("p");
+        p5.innerText="Haven't received the confirmation email yet?";
+        let break1=document.createElement("br");
+        let a=document.createElement("a");
+        a.innerText="Resend the email";
+
+        last.append(green,p5,break1,a);
+        document.querySelector("#cred").append(head1,gacc,giacc,oacc,or,div1,green,last)
 
 
-    //     }
-    // })
+
+        ////////////////////////
+
+        // let head1=document.createElement("div");
+        // let heading=document.createElement("h1");
+        // heading.innerText="Log In";
+        // head1.append(heading);
+
+        // let gacc=document.createElement("div");
+        // gacc.setAttribute("class","blue")
+        // let p1=document.createElement("p");
+        // p1.innerText="Use Google account";
+        // gacc.append(p1);
+
+        // document.querySelector("#cred").append(head1,gacc)
+
+        
+
+
+        }
+    })
 
   
 </script>
