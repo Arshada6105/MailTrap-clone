@@ -17,6 +17,7 @@
     top: 0;
     width: 100%;
     background-color: white;
+    z-index: 1;
 }
 
 .logo{
@@ -100,8 +101,9 @@
     border: 1px solid #26394e;
     border-radius: 7px;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     justify-content: space-evenly;
+
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 15px;
@@ -114,11 +116,11 @@
 }
 .service>div:nth-child(1)>div:nth-child(1){
  text-align: start;
- border: none;
+ /* border: none; */
 }
 
 
-   .service>div:nth-child(1)>div:last-child{
+   /* .service>div:nth-child(1)>div:last-child{
     
     border: none;
    }
@@ -130,8 +132,49 @@
    .service>div:nth-child(1)>div:nth-child(7){
     
     border: none;
+   } */
+
+  
+   #captchadiv{
+    display: flex;
+    flex-direction: row;
+    
    }
 
+   #captchadiv img{
+    width: 5%;
+   }
+
+   #captchadiv p{
+    position: relative;
+    left:-30px;
+   }
+
+   #elast p:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   }
+
+   #none{
+    border: none;
+   }
+
+   #none2{
+    border: none;
+   }
+
+   #none3{
+    border: none;
+   }
+   
+
+
+   #captchadiv input{
+    width: 20px;
+    height: 20px;
+    
+   }
    .green:hover{
     background-color: #3ee187;
 
@@ -144,6 +187,7 @@
     border-radius: 3px;
     border: none;
     text-align: center;
+    padding: 15px;
    }
 
    .blue:hover{
@@ -203,6 +247,8 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+
 
 
 

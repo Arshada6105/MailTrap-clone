@@ -6,34 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container{
-            width: auto;
-            height: 300px;
-            /* border: 1px solid black; */
-            display: flex;
-            justify-content: space-evenly;
-        }
-        .container>div{
-            height: 200px;
-           
-            border: 1px solid red;
-            margin-left: 200px;
-            /* margin-right: 200px; */
-            width: 300px;
-            padding: 200px;
-        }
+       
     </style>
 </head>
 <body>
-    <div  class="container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>6</div>
-        <div>6</div>
-        <div>6</div>
-        <div>6</div>
-    </div>
+   <input type="text" name="" id="name">
+   <button onclick="myfun()">click me</button>
+   <h1 id="heading"></h1>
 </body>
 </html>
+<script>
+
+function myfun(){
+    let x=document.querySelector("#name").value;
+    document.querySelector("#heading").innerHTML=x;
+}
+    
+   
+</script>
