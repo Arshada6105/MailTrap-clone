@@ -17,6 +17,7 @@
     top: 0;
     width: 100%;
     background-color: white;
+    z-index: 1;
 }
 
 .logo{
@@ -93,9 +94,9 @@
     margin-bottom: 30px;
 }
 
-#cred{
+/* #cred{
     border: 1px solid red;
-}
+} */
 
 .service>div:nth-child(1)>div{
     width: 80%;
@@ -112,7 +113,30 @@
    
 }
 
- input{
+#passlabel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#passinput{
+    width: 80%;
+}
+
+#checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: start; 
+    text-align: center;
+}
+#checkbox input{
+    width: 5%;
+    position: relative;
+    top: -14px;
+    margin-right: 5px;
+}
+
+input{
     height: 50px;
     width: 100%;
 }
@@ -120,24 +144,17 @@
  text-align: start;
  border: none;
 }
-.service>div:nth-child(1)>div:nth-child(6){
-    text-align: start;
-    border: none;
-   }
 
-   .service>div:nth-child(1)>div:last-child{
-    
+#none1{
     border: none;
-   }
+}
+#none2{
+    border: none;
+}
 
-   .service>div:nth-child(1)>div:nth-child(5){
-    
+#none3{
     border: none;
-   }
-   .service>div:nth-child(1)>div:nth-child(7){
-    
-    border: none;
-   }
+}
 
    .green:hover{
     background-color: #3ee187;
@@ -150,6 +167,7 @@
     background-color: #22d172;
     border-radius: 3px;
     border: none;
+    padding: 15px;
    }
 
    .blue:hover{

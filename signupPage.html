@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
     <div class="nav">
@@ -24,16 +24,16 @@
 
     <div class="service">
         <div id="cred">
-          <div><h1>Create Free Account</h1></div>
+          <div id="none"><h1>Create Free Account</h1></div>
           <div class="blue">
             
             <p>Use Google account</p>
            </div>
           <div class="blue"><p>Use Github account</p></div>
           <div class="blue"><p>Use Office 365 account</p></div>
-          <div><p>OR</p></div>
+          <div id="none2"><p>OR</p></div>
           <div class="green next" id="next" style="text-align: center;">Signup With Your Email </div>
-          <div>By creating a Mailtrap account, you agree to our 
+          <div id="none3">By creating a Mailtrap account, you agree to our 
             <p> <a href="" style="display: inline;">Terms of Service</a> and <a href="">Privacy Policy.</a> </p>
              
             We'll occasionally send you account related emails.</div>
@@ -108,72 +108,194 @@
         document.location.href="signupPage.html"
     })
 
-    // document.querySelector("#next").addEventListener("click",()=>{
-    //     let emailValue=document.querySelector("#email").value;
-    //     if(emailValue==""){
-    //         alert("Please Enter Your Email First")
-    //     }else{
-    //         document.querySelector("#cred").innerHTML=null;
+    document.querySelector("#next").addEventListener("click",()=>{
+       
+            document.querySelector("#cred").innerHTML=null;
 
-    //     let head1=document.createElement("div");
-    //     let heading=document.createElement("h1");
-    //     heading.innerText="Log In";
-    //     head1.append(heading);
+         let head1=document.createElement("div");
+         head1.style.border="none"
+        let heading=document.createElement("h1");
+        heading.innerText="Create Free Account";
+        head1.append(heading);
 
-    //     let gacc=document.querySelector("div");
-    //     gacc.setAttribute("class","blue")
-    //     let p1=document.createElement("p");
-    //     p1.innerText="Use Google account";
-    //     gacc.append(p1);
+        let gacc=document.createElement("div");
+        gacc.setAttribute("class","blue")
+        let p1=document.createElement("p");
+        p1.innerText="Use Google account";
+        gacc.append(p1);
 
-    //     let giacc=document.querySelector("div");
-    //     giacc.setAttribute("class","blue")
-    //     let p2=document.createElement("p");
-    //     p2.innerText="Use Github account";
-    //     giacc.append(p2);
-  
-    //     let oacc=document.querySelector("div");
-    //     oacc.setAttribute("class","blue")
-    //     let p3=document.createElement("p");
-    //     p3.innerText="Use Office 365 account";
-    //     oacc.append(p3);
+        let giacc=document.createElement("div");
+        giacc.setAttribute("class","blue")
+        let p2=document.createElement("p");
+        p2.innerText="Use Github account";
+        giacc.append(p2);
 
-    //     let or=document.querySelector("div");
-    //     or.setAttribute("class","blue")
-    //     let p4=document.createElement("p");
-    //     p3.innerText="OR";
-    //     or.append(p3);
+        let oacc=document.createElement("div");
+        oacc.setAttribute("class","blue")
+        let p3=document.createElement("p");
+        p3.innerText="Use Office 365 account";
+        oacc.append(p3);
 
 
-    //     let div1=document.createElement("div");
-    //     let label1=document.createElement("label");
-    //     // label1.innerText("Email")
-    //     let input1=document.createElement("input");
-    //     input1.setAttribute("id","email");
-    //     input1.innerText=emailValue;
-    //     div1.append(label1,input1);
-
-    //     let green=document.createElement("div");
-    //     green.setAttribute("class","green next");
-    //     green.setAttribute("id","next");
-    //     green.innerText="Next";
-
-    //     let last=document.createElement("div");
-    //     let p5=document.createElement("p");
-    //     p5.innerText="Haven't received the confirmation email yet?";
-    //     let break1=document.createElement("br");
-    //     let a=document.createElement("a");
-    //     a.innerText="Resend the email";
-
-    //     last.append(p5,break1,a);
+        let or=document.createElement("div");
+        or.style.border="none";
+        let p4=document.createElement("p");
+        p4.innerText="OR";
+        or.append(p4);
 
 
 
-    //     document.querySelector("#cred").append("hiii")
+       
+        let email1=document.createElement("div");
+        email1.style.border="none"
+        let label1=document.createElement("p");
+        label1.innerText="Email";
+        label1.style.textAlign="start"
+        label1.style.marginLeft="35px"
+
+        let input1=document.createElement("input");
+        input1.setAttribute("id","email");
+        input1.setAttribute("type","text")
+        // input1.innerText=emailValue;
+        // input1.style.color="grey"
+        email1.append(input1);
+
+        let pass1=document.createElement("div");
+        pass1.style.border="none"
+        let label2=document.createElement("p");
+        label2.innerText="Password";
+        label2.style.textAlign="start"
+        label2.style.marginLeft="35px"
+
+        let input2=document.createElement("input");
+        input2.setAttribute("id","password");
+        input2.setAttribute("type","text");
+        // input1.innerText=emailValue;
+        // input1.style.color="grey"
+        pass1.append(input2);
+
+        let conf=document.createElement("div");
+        conf.style.border="none"
+        let label3=document.createElement("p");
+        label3.innerText="Confirm Password";
+        label3.style.textAlign="start"
+        label3.style.marginLeft="35px"
+
+        let input3=document.createElement("input");
+        input3.setAttribute("id","confirm");
+        input3.setAttribute("type","text");
+        // input1.innerText=emailValue;
+        // input1.style.color="grey"
+        conf.append(input3);
+
+        
+        let captcha=document.createElement("div");
+        captcha.style.border="none"
+        captcha.style.backgroundColor="#f9f9f9";
+        captcha.style.boxShadow="rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;";
+        captcha.style.width="70%"
+        
+
+        captcha.setAttribute("id","captchadiv")
+        let box5=document.createElement("input");
+        box5.setAttribute("type","checkbox");
+        let robot=document.createElement("p");
+        robot.innerText="I'm not a Robot";
+
+        let robotimg=document.createElement("img");
+        robotimg.setAttribute("src","https://www.gstatic.com/recaptcha/api2/logo_48.png");
+
+        captcha.append(box5,robot,robotimg)
 
 
-    //     }
-    // })
+        let line=document.createElement("div");
+        line.style.border="none"
+        let line1=document.createElement("p");
+        line1.innerText="You will receive the confirmation email after submitting this form."
+
+        line.append(line1)
+
+          let green=document.createElement("div");
+        green.setAttribute("class","green next");
+        green.setAttribute("id","next");
+        green.innerText="Sign Up";
+
+        let last=document.createElement("div");
+        last.style.border="none"
+    
+
+        last.append(green);
+
+
+        
+
+        let elast=document.createElement("div");
+        elast.style.border="none"
+        elast.setAttribute("id","elast")
+        let p10=document.createElement("p");
+        p10.innerText="By creating a Mailtrap account, you agree to our ";
+        let p11=document.createElement("p");
+        let a10=document.createElement("a");
+        a10.setAttribute("href","");
+        a10.innerText="Terms of Service";
+        let p12=document.createElement("p");
+        p12.innerText="and"
+        let a11=document.createElement("a");
+        a11.setAttribute("href","");
+        a11.innerText="Privacy Policy."
+        p11.append(a10,p12,a11);
+        let p13=document.createElement("p");
+        p13.innerText=" We'll occasionally send you account related emails."
+
+        elast.append(p10,p11,p13)
+
+
+
+
+        document.querySelector("#cred").append(head1,gacc,giacc,oacc,or,label1,email1,label2,pass1,label3,conf,captcha,line,last,elast)
+
+
+
+
+        let credarr=JSON.parse(localStorage.getItem("cred"))||[];
+
+
+        document.querySelector("#next").addEventListener("click",()=>{
+        
+            let x=document.querySelector("#email").value;
+            let y=document.querySelector("#password").value;
+            let z=document.querySelector("#confirm").value;
+
+            if(x=="" || y=="" ||z==""){
+                alert("Invalid Input");
+            }else if(y!==z){
+                alert("Password not matched")
+            }
+            else{
+
+                
+
+                let obj={};
+
+                 obj={
+                    email:x,
+                    password:y
+                };
+
+                credarr.push(obj);
+                localStorage.setItem("cred",JSON.stringify(credarr))
+
+                alert("account created successfully")
+
+            }
+        })
+
+        
+
+
+        
+    })
 
   
 </script>
+

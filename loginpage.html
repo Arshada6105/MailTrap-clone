@@ -28,11 +28,11 @@
           <div class="blue"><p>Use Google account</p></div>
           <div class="blue"><p>Use Github account</p></div>
           <div class="blue"><p>Use Office 365 account</p></div>
-          <div><p>OR</p></div>
-          <div><label for="">Email</label>
-        <input type="text" id="email"></div>
+          <div id="none1"><p>OR</p></div>
+          <div id="none2"><label for="">Email</label>
+          <input type="text" id="email"></div>
           <div class="green next" id="next">Next</div>
-          <div>Haven't received the confirmation email yet?<br>
+          <div id="none3">Haven't received the confirmation email yet?<br>
            <a href="">Resend the email</a> </div>
         </div>
 
@@ -100,12 +100,33 @@
         document.location.href="signupPage.html"
     })
 
+    let credarr=JSON.parse(localStorage.getItem("cred"))||[];
+
     document.querySelector("#next").addEventListener("click",()=>{
         let emailValue=document.querySelector("#email").value;
         if(emailValue==""){
             alert("Please Enter Your Email First")
         }else{
+
+
+            let present=false;
+            for(let i=0;i<credarr.length;i++){
+                if(emailValue==credarr[i].email){
+                    present=true;
+                    break;
+                }
+            }
+
+            if(present==false){
+                alert("Account not found")
+            }else{
+                
             document.querySelector("#cred").innerHTML=null;
+
+        
+
+
+////////////////////////
 
         let head1=document.createElement("div");
         let heading=document.createElement("h1");
@@ -123,64 +144,128 @@
         let p2=document.createElement("p");
         p2.innerText="Use Github account";
         giacc.append(p2);
-  
+
         let oacc=document.createElement("div");
         oacc.setAttribute("class","blue")
         let p3=document.createElement("p");
         p3.innerText="Use Office 365 account";
         oacc.append(p3);
 
+
         let or=document.createElement("div");
-        or.setAttribute("class","blue")
+        or.style.border="none";
         let p4=document.createElement("p");
-        p3.innerText="OR";
-        or.append(p3);
+        p4.innerText="OR";
+        or.append(p4);
 
 
-        let div1=document.createElement("div");
-        let label1=document.createElement("label");
-        // label1.innerText("Email")
-        let input1=document.createElement("input");
-        input1.setAttribute("id","email");
+
+
+        let email1=document.createElement("div");
+        let label1=document.createElement("p");
+        label1.innerText="Email";
+        label1.style.textAlign="start"
+        label1.style.marginLeft="35px"
+
+        let input1=document.createElement("div");
+        // input1.setAttribute("id","email");
         input1.innerText=emailValue;
-        div1.append(label1,input1);
+        input1.style.color="grey"
+        email1.append(label1,input1);
+
+        let pass=document.createElement("div");
+        pass.style.border="none"
+        pass.setAttribute("id","passlabel")
+        let p5=document.createElement("p");
+        let p6=document.createElement("p");
+        let anchor=document.createElement("a");
+        anchor.setAttribute("href","password.html")
+        p5.innerText="Password"
+        p6.innerText="forgot Password";
+        anchor.append(p6)
+        pass.append(p5,anchor);
+
+        let inputpass=document.createElement("input");
+        inputpass.setAttribute("id","passinput");
+        inputpass.setAttribute("type","text");
+
+        let rem=document.createElement("div");
+        rem.style.border="none"
+        rem.setAttribute("id","checkbox");
+        let checkinput=document.createElement("input");
+        // checkinput.setAttribute("name","remeberme");
+        checkinput.setAttribute("type","checkbox");
+        let remlabel=document.createElement("label");
+        remlabel.innerText="Remember me";
+
+        rem.append(checkinput,remlabel);
+
 
         let green=document.createElement("div");
         green.setAttribute("class","green next");
         green.setAttribute("id","next");
-        green.innerText="Next";
+        green.innerText="Sign In";
 
         let last=document.createElement("div");
-        let p5=document.createElement("p");
-        p5.innerText="Haven't received the confirmation email yet?";
+        last.style.border="none"
+        let p8=document.createElement("p");
+        p8.innerText="Haven't received the confirmation email yet?";
         let break1=document.createElement("br");
-        let a=document.createElement("a");
-        a.innerText="Resend the email";
+        let a1=document.createElement("a");
+        a1.setAttribute("href","")
+        a1.innerText="Resend the email";
 
-        last.append(green,p5,break1,a);
-        document.querySelector("#cred").append(head1,gacc,giacc,oacc,or,div1,green,last)
+        last.append(green,p8,break1,a1);
 
 
 
-        ////////////////////////
 
-        // let head1=document.createElement("div");
-        // let heading=document.createElement("h1");
-        // heading.innerText="Log In";
-        // head1.append(heading);
+        document.querySelector("#cred").append(head1,gacc,giacc,oacc,or,label1,email1,pass,inputpass,rem,last)
 
-        // let gacc=document.createElement("div");
-        // gacc.setAttribute("class","blue")
-        // let p1=document.createElement("p");
-        // p1.innerText="Use Google account";
-        // gacc.append(p1);
 
-        // document.querySelector("#cred").append(head1,gacc)
 
-        
+
+        ///////////////////////
+
+        document.querySelector("#next").addEventListener("click",()=>{
+            let x=document.querySelector("#passinput").value;
+            
+
+            if(x==""){
+                alert("enter password first")
+            }else{
+                let present1=false;
+                for(let i=0;i<credarr.length;i++){
+                    if(x==credarr[i].password){
+                        present1=true;
+                        break;
+                    }
+                }
+                
+                if(present1==false){
+                    alert("wrong password")
+                }else{
+                    alert("Signed in succeessfully")
+                }
+            }
+        })
+
 
 
         }
+                  
+    
+    
+    }
+            
+
+
+
+
+
+////////////////////////////////////
+
+
     })
 
   
