@@ -61,8 +61,8 @@
                     </div></div>
                 </div>
             </div>
-            <div class="pointer grey"><h4>Email API</h4></div>
-            <div class="pointer grey"><h4>Pricing</h4></div>
+            <div class="pointer grey" id="emailAPI"><h4>Email API</h4></div>
+            <div class="pointer grey" id="price"><h4>Pricing</h4></div>
             <div class="dropdown2"><h4>Resources </h4>
                 <div class="dropdown2-content">
                     
@@ -104,9 +104,25 @@
             
         </div>
         <div class="login">
+            
             <button class="pointer" id="signin">Log In</button>
             <button class="pointer" id="signup">Sign Up</button>
+            <div id="dropdownMenu">
+            <div></div>
+            <div></div>
+            <div></div>
+            </div>
+           
         </div>
+        
+    </div>
+    <div id="showddmenu">
+        <h4>Email Testing</h4>
+        <h4>Email API</h4>
+        <h4>Pricing</h4>
+        <h4>Resources</h4>
+        <h4>Login</h4>
+        <h4>Sign Up</h4>
     </div>
 
     <div class="sandbox">
@@ -453,5 +469,27 @@
 
         // console.log("left click")
    })
+
+
+   let click=0;
+   document.querySelector("#dropdownMenu"),addEventListener("click",()=>{
+   
+    click++;
+    if(click%2==1){
+        document.querySelector("#showddmenu").style.display="block"
+    }else{
+        document.querySelector("#showddmenu").style.display="none"
+    }
+    
+   })
+
+   document.querySelector("#emailAPI").addEventListener("click",()=>{
+    window.location.href="emailpage.html"
+   })
+
+   document.querySelector("#price").addEventListener("click",()=>{
+    window.location.href="pricingpage.html"
+   })
+
 
 </script>
