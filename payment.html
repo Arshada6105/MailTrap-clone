@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body>h1{
+            text-align: center;
+        }
+
+        .container{
+            width: 200px;
+            height: auto;
+            /* border: 1px solid black; */
+            margin: auto;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .container>label{
+            display: block;
+            margin-top: 20px;
+        }
+
+        .container>button{
+            display: block;
+            margin-top: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Payment Page</h1>
+    <div class="container">
+        <label for="">Name</label>
+        <input type="text" id="name" placeholder="Account holder Name">
+        <label for="">Card Number</label>
+        <input type="text" id="no" placeholder="Card Number">
+        <label for="">Expiry Date</label>
+        <input type="text" id="exp" placeholder="Exp date">
+        <label for="">CVV</label>
+        <input type="text" id="cvv" placeholder="CVV">
+        <button id="sent">Send OTP</button>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("#sent").addEventListener("click",()=>{
+        let x=document.querySelector("#name").value;
+        let y=document.querySelector("#no").value;
+        let z=document.querySelector("#exp").value;
+        let a=document.querySelector("#cvv").value;
+
+        if(x==""||y==""||z==""||a==""){
+            alert("Enter valid data first");
+        }else{
+            alert("OTP sent successfully");
+        document.querySelector(".container").innerHTML=null;
+        let label1=document.createElement("label");
+        label1.innerText="Enter OTP";
+        let input1=document.createElement("input");
+        input1.setAttribute("type","text");
+        input1.setAttribute("id","input");
+        let submit=document.createElement("button");
+        submit.innerText="Submit";
+        submit.setAttribute("id","submit")
+
+        document.querySelector(".container").append(label1,input1,submit);
+
+
+        document.querySelector("#submit").addEventListener("click",()=>{
+        let q=document.querySelector("#input").value;
+        console.log(q)
+
+        if(q=="1234"){
+            alert("Payment Successfull")
+        }else{
+            alert("Invalid OTP")
+        }
+    })
+        }
+       
+    })
+
+   
+</script>
